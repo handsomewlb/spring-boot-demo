@@ -1,0 +1,124 @@
+2019-07-31 16:07:22.617  INFO 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : Starting SpringBootLoggerResourceApplication on USER-20190318ZX with PID 11400 (started by Administrator in E:\IdeaWorkspace\spring-boot-入门)
+2019-07-31 16:07:22.619 DEBUG 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-31 16:07:22.620  INFO 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : No active profile set, falling back to default profiles: default
+2019-07-31 16:07:22.664  INFO 11400 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-31 16:07:22.665  INFO 11400 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-31 16:07:23.940  INFO 11400 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-31 16:07:23.969  INFO 11400 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-31 16:07:23.969  INFO 11400 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-31 16:07:24.127  INFO 11400 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-31 16:07:24.127  INFO 11400 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1462 ms
+2019-07-31 16:07:24.328  INFO 11400 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:07:24.476  INFO 11400 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-07-31 16:07:24.524  INFO 11400 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-31 16:07:24.527  INFO 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : Started SpringBootLoggerResourceApplication in 2.452 seconds (JVM running for 3.218)
+2019-07-31 16:07:28.672  INFO 11400 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-31 16:07:28.672  INFO 11400 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-31 16:07:28.677  INFO 11400 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2019-07-31 16:07:28.695 DEBUG 11400 --- [http-nio-8080-exec-1] c.w.s.config.LogConfig                   : debug:Process in LogController.showLog method
+2019-07-31 16:07:28.695  INFO 11400 --- [http-nio-8080-exec-1] c.w.s.config.LogConfig                   : info:Process in LogController.showLog method
+2019-07-31 16:07:28.695  WARN 11400 --- [http-nio-8080-exec-1] c.w.s.config.LogConfig                   : warn:Process in LogController.showLog method
+2019-07-31 16:07:28.695 ERROR 11400 --- [http-nio-8080-exec-1] c.w.s.config.LogConfig                   : error:Process in LogController.showLog method
+2019-07-31 16:09:21.542  INFO 11400 --- [Thread-10] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:09:21.694  INFO 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : Starting SpringBootLoggerResourceApplication on USER-20190318ZX with PID 11400 (started by Administrator in E:\IdeaWorkspace\spring-boot-入门)
+2019-07-31 16:09:21.694 DEBUG 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-31 16:09:21.694  INFO 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : No active profile set, falling back to default profiles: default
+2019-07-31 16:09:22.078  INFO 11400 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-31 16:09:22.079  INFO 11400 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-31 16:09:22.079  INFO 11400 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-31 16:09:22.174  INFO 11400 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-31 16:09:22.174  INFO 11400 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 478 ms
+2019-07-31 16:09:22.212  INFO 11400 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:09:22.246  INFO 11400 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-07-31 16:09:22.257  INFO 11400 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-31 16:09:22.258  INFO 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : Started SpringBootLoggerResourceApplication in 0.602 seconds (JVM running for 120.945)
+2019-07-31 16:09:22.259  INFO 11400 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-07-31 16:11:09.795  INFO 11400 --- [Thread-18] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:11:10.114  INFO 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : Starting SpringBootLoggerResourceApplication on USER-20190318ZX with PID 11400 (started by Administrator in E:\IdeaWorkspace\spring-boot-入门)
+2019-07-31 16:11:10.115 DEBUG 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-31 16:11:10.115  INFO 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : No active profile set, falling back to default profiles: default
+2019-07-31 16:11:10.547  INFO 11400 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-31 16:11:10.548  INFO 11400 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-31 16:11:10.548  INFO 11400 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-31 16:11:10.653  INFO 11400 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-31 16:11:10.654  INFO 11400 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 537 ms
+2019-07-31 16:11:10.731  INFO 11400 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:11:10.790  INFO 11400 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-07-31 16:11:10.817  INFO 11400 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-31 16:11:10.818  INFO 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : Started SpringBootLoggerResourceApplication in 0.748 seconds (JVM running for 229.502)
+2019-07-31 16:11:10.819  INFO 11400 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-07-31 16:12:50.754  INFO 11400 --- [Thread-24] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:12:50.943  INFO 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : Starting SpringBootLoggerResourceApplication on USER-20190318ZX with PID 11400 (started by Administrator in E:\IdeaWorkspace\spring-boot-入门)
+2019-07-31 16:12:50.943 DEBUG 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-31 16:12:50.943  INFO 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : The following profiles are active: dev
+2019-07-31 16:12:51.278  INFO 11400 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-31 16:12:51.279  INFO 11400 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-31 16:12:51.279  INFO 11400 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-31 16:12:51.356  INFO 11400 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-31 16:12:51.357  INFO 11400 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 412 ms
+2019-07-31 16:12:51.398  INFO 11400 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:12:51.437  INFO 11400 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-07-31 16:12:51.461  INFO 11400 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-31 16:12:51.461  INFO 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : Started SpringBootLoggerResourceApplication in 0.577 seconds (JVM running for 330.142)
+2019-07-31 16:12:51.462  INFO 11400 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-07-31 16:13:31.544  INFO 11400 --- [Thread-30] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:13:31.708  INFO 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : Starting SpringBootLoggerResourceApplication on USER-20190318ZX with PID 11400 (started by Administrator in E:\IdeaWorkspace\spring-boot-入门)
+2019-07-31 16:13:31.708 DEBUG 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-31 16:13:31.708  INFO 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : The following profiles are active: dev
+2019-07-31 16:13:32.006  INFO 11400 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-31 16:13:32.007  INFO 11400 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-31 16:13:32.007  INFO 11400 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-31 16:13:32.075  INFO 11400 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-31 16:13:32.075  INFO 11400 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 365 ms
+2019-07-31 16:13:32.106  INFO 11400 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:13:32.135  INFO 11400 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-07-31 16:13:32.144  INFO 11400 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-31 16:13:32.145  INFO 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : Started SpringBootLoggerResourceApplication in 0.469 seconds (JVM running for 370.825)
+2019-07-31 16:13:32.146  INFO 11400 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-07-31 16:23:30.207  INFO 11400 --- [Thread-36] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:23:30.409  INFO 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : Starting SpringBootLoggerResourceApplication on USER-20190318ZX with PID 11400 (started by Administrator in E:\IdeaWorkspace\spring-boot-入门)
+2019-07-31 16:23:30.410 DEBUG 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-31 16:23:30.410  INFO 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : The following profiles are active: dev
+2019-07-31 16:23:30.708  INFO 11400 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-31 16:23:30.708  INFO 11400 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-31 16:23:30.708  INFO 11400 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-31 16:23:30.880  INFO 11400 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-31 16:23:30.880  INFO 11400 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 468 ms
+2019-07-31 16:23:30.912  INFO 11400 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:23:30.943  INFO 11400 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-07-31 16:23:30.954  INFO 11400 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-31 16:23:30.955  INFO 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : Started SpringBootLoggerResourceApplication in 0.575 seconds (JVM running for 969.618)
+2019-07-31 16:23:30.956  INFO 11400 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-07-31 16:23:33.389  INFO 11400 --- [Thread-42] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:23:33.515  INFO 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : Starting SpringBootLoggerResourceApplication on USER-20190318ZX with PID 11400 (started by Administrator in E:\IdeaWorkspace\spring-boot-入门)
+2019-07-31 16:23:33.515 DEBUG 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-31 16:23:33.515  INFO 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : The following profiles are active: dev
+2019-07-31 16:23:33.816  INFO 11400 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-31 16:23:33.817  INFO 11400 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-31 16:23:33.817  INFO 11400 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-31 16:23:33.890  INFO 11400 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-31 16:23:33.891  INFO 11400 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 374 ms
+2019-07-31 16:23:33.935  INFO 11400 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:23:33.978  INFO 11400 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-07-31 16:23:33.990  INFO 11400 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-31 16:23:33.991  INFO 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : Started SpringBootLoggerResourceApplication in 0.506 seconds (JVM running for 972.654)
+2019-07-31 16:23:33.992  INFO 11400 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-07-31 16:23:35.020  INFO 11400 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-31 16:23:35.021  INFO 11400 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-31 16:23:35.025  INFO 11400 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2019-07-31 16:25:35.478  INFO 11400 --- [Thread-48] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:25:35.749  INFO 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : Starting SpringBootLoggerResourceApplication on USER-20190318ZX with PID 11400 (started by Administrator in E:\IdeaWorkspace\spring-boot-入门)
+2019-07-31 16:25:35.749  INFO 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : The following profiles are active: test
+2019-07-31 16:25:36.226  INFO 11400 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-31 16:25:36.227  INFO 11400 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-31 16:25:36.227  INFO 11400 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-31 16:25:36.396  INFO 11400 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-31 16:25:36.396  INFO 11400 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 645 ms
+2019-07-31 16:25:36.459  INFO 11400 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:25:36.499  INFO 11400 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-07-31 16:25:36.511  INFO 11400 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-31 16:25:36.512  INFO 11400 --- [restartedMain] .w.s.SpringBootLoggerResourceApplication : Started SpringBootLoggerResourceApplication in 0.853 seconds (JVM running for 1095.171)
+2019-07-31 16:25:36.513  INFO 11400 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-07-31 16:25:36.537  INFO 11400 --- [http-nio-8080-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-31 16:25:36.537  INFO 11400 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-31 16:25:36.539  INFO 11400 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
