@@ -1,0 +1,21 @@
+
+spring:
+  # 当前文件
+  profiles: test
+
+# 日志配置
+logging:
+  path:           #日志路径
+  file: spring-boot-logger-resource\log\springboot-demo.log #日志名称，这里用相对路径创建。可以不用path直接用file创建任何地方 
+  level:
+    # 指定路径配置log级别
+    com:
+      wlb: info
+
+# 自定义配置
+com:
+  resource:
+    resourceUrl: 192.168.0.2
+    resourcePort: 8889
+    maxNum: 50
+    minNum: 1
