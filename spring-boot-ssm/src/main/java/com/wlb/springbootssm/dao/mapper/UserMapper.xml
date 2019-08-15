@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.wlb.springbootssm.dao.IUserDao">
+
+    <select id="getUserList" resultType="com.wlb.springbootssm.entity.User">
+        SELECT ID id, USER_NAME userName, PASSWORD password
+        FROM TEST_USER
+        WHERE STATUS = 1
+    </select>
+    
+    <select id="getUserById" resultType="com.wlb.springbootssm.entity.User">
+        SELECT ID id, USER_NAME userName, PASSWORD password
+        FROM TEST_USER
+        WHERE ID = #{id} AND STATUS = 1
+    </select>
+
+    <insert id="addUser" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO TEST_USER(
+          ID, USER_NAME, PASSWORD
+        )
+        VALUES(
+          #{user.id}, #{user.userName}, #{user.password}
+        )
+    </insert>
+
+    <update id="updateUserById">
+        UPDATE TEST_USER
+        SET USER_NAME = #{user.userName}, PASSWORD = #{user.password}
+        WHERE ID = #{user.id} AND STATUS = 1
+    </update>
+
+    <update id="deleteUserById">
+        UPDATE TEST_USER
+        SET STATUS = 0
+        WHERE ID = #{user.id} AND STATUS = 1
+    </update>
+</mapper>

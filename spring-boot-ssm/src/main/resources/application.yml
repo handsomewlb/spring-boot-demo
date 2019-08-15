@@ -1,0 +1,7 @@
+
+spring:
+  profiles:
+    # 当前选定的配置文件
+    active: dev
+server:
+  port: 8082
