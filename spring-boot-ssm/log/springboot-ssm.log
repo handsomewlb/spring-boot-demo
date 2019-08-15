@@ -1,0 +1,515 @@
+2019-08-15 15:38:29.437  INFO 7492 --- [restartedMain] c.w.s.SpringBootSsmApplication           : Starting SpringBootSsmApplication on USER-20190318ZX with PID 7492 (started by Administrator in E:\IdeaWorkspace\spring-boot-入门)
+2019-08-15 15:38:29.448 DEBUG 7492 --- [restartedMain] c.w.s.SpringBootSsmApplication           : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-08-15 15:38:29.448  INFO 7492 --- [restartedMain] c.w.s.SpringBootSsmApplication           : The following profiles are active: dev
+2019-08-15 15:38:29.588  INFO 7492 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-15 15:38:29.588  INFO 7492 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-15 15:38:32.187  INFO 7492 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2019-08-15 15:38:32.296  INFO 7492 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-15 15:38:32.297  INFO 7492 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-08-15 15:38:32.676  INFO 7492 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-15 15:38:32.676  INFO 7492 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3088 ms
+2019-08-15 15:38:33.132  INFO 7492 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-15 15:38:33.436  INFO 7492 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-08-15 15:38:33.538  INFO 7492 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2019-08-15 15:38:33.542  INFO 7492 --- [restartedMain] c.w.s.SpringBootSsmApplication           : Started SpringBootSsmApplication in 6.073 seconds (JVM running for 8.303)
+2019-08-15 15:38:52.688  INFO 7492 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-15 15:38:52.688  INFO 7492 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-15 15:38:52.737  INFO 7492 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 48 ms
+2019-08-15 15:38:52.826  INFO 7492 --- [http-nio-8082-exec-1] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUser method
+2019-08-15 15:38:52.826 DEBUG 7492 --- [http-nio-8082-exec-1] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserList method
+2019-08-15 15:38:52.951 ERROR 7492 --- [http-nio-8082-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.wlb.springbootssm.dao.IUserDao.getUserList] with root cause
+
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.wlb.springbootssm.dao.IUserDao.getUserList
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.binding.MapperProxy.lambda$cachedMapperMethod$0(MapperProxy.java:61) ~[mybatis-3.5.2.jar:3.5.2]
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660) ~[na:1.8.0_151]
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:61) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:56) ~[mybatis-3.5.2.jar:3.5.2]
+	at com.sun.proxy.$Proxy61.getUserList(Unknown Source) ~[na:na]
+	at com.wlb.springbootssm.service.impl.UserServiceImpl.getUserList(UserServiceImpl.java:31) ~[classes/:na]
+	at com.wlb.springbootssm.controller.UserController.findUserList(UserController.java:31) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_151]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_151]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_151]
+
+2019-08-15 15:41:09.260  INFO 12292 --- [restartedMain] c.w.s.SpringBootSsmApplication           : Starting SpringBootSsmApplication on USER-20190318ZX with PID 12292 (started by Administrator in E:\IdeaWorkspace\spring-boot-入门)
+2019-08-15 15:41:09.262 DEBUG 12292 --- [restartedMain] c.w.s.SpringBootSsmApplication           : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-08-15 15:41:09.263  INFO 12292 --- [restartedMain] c.w.s.SpringBootSsmApplication           : The following profiles are active: dev
+2019-08-15 15:41:09.306  INFO 12292 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-15 15:41:09.306  INFO 12292 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-15 15:41:11.054  INFO 12292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2019-08-15 15:41:11.079  INFO 12292 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-15 15:41:11.079  INFO 12292 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-08-15 15:41:11.328  INFO 12292 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-15 15:41:11.328  INFO 12292 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2022 ms
+2019-08-15 15:41:11.695  INFO 12292 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-15 15:41:12.139  INFO 12292 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-08-15 15:41:12.192  INFO 12292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2019-08-15 15:41:12.196  INFO 12292 --- [restartedMain] c.w.s.SpringBootSsmApplication           : Started SpringBootSsmApplication in 3.946 seconds (JVM running for 5.354)
+2019-08-15 15:41:26.748  INFO 12292 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-15 15:41:26.748  INFO 12292 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-15 15:41:26.757  INFO 12292 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-08-15 15:41:26.781  INFO 12292 --- [http-nio-8082-exec-1] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUser method
+2019-08-15 15:41:26.782 DEBUG 12292 --- [http-nio-8082-exec-1] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserList method
+2019-08-15 15:41:26.820 ERROR 12292 --- [http-nio-8082-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.wlb.springbootssm.dao.IUserDao.getUserList] with root cause
+
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.wlb.springbootssm.dao.IUserDao.getUserList
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.binding.MapperProxy.lambda$cachedMapperMethod$0(MapperProxy.java:61) ~[mybatis-3.5.2.jar:3.5.2]
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660) ~[na:1.8.0_151]
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:61) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:56) ~[mybatis-3.5.2.jar:3.5.2]
+	at com.sun.proxy.$Proxy61.getUserList(Unknown Source) ~[na:na]
+	at com.wlb.springbootssm.service.impl.UserServiceImpl.getUserList(UserServiceImpl.java:31) ~[classes/:na]
+	at com.wlb.springbootssm.controller.UserController.findUserList(UserController.java:31) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_151]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_151]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_151]
+
+2019-08-15 15:41:29.406  INFO 12292 --- [http-nio-8082-exec-4] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUser method
+2019-08-15 15:41:29.406 DEBUG 12292 --- [http-nio-8082-exec-4] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserList method
+2019-08-15 15:41:29.408 ERROR 12292 --- [http-nio-8082-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.wlb.springbootssm.dao.IUserDao.getUserList] with root cause
+
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.wlb.springbootssm.dao.IUserDao.getUserList
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.binding.MapperProxy.lambda$cachedMapperMethod$0(MapperProxy.java:61) ~[mybatis-3.5.2.jar:3.5.2]
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660) ~[na:1.8.0_151]
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:61) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:56) ~[mybatis-3.5.2.jar:3.5.2]
+	at com.sun.proxy.$Proxy61.getUserList(Unknown Source) ~[na:na]
+	at com.wlb.springbootssm.service.impl.UserServiceImpl.getUserList(UserServiceImpl.java:31) ~[classes/:na]
+	at com.wlb.springbootssm.controller.UserController.findUserList(UserController.java:31) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_151]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_151]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_151]
+
+2019-08-15 15:42:10.743  INFO 8412 --- [restartedMain] c.w.s.SpringBootSsmApplication           : Starting SpringBootSsmApplication on USER-20190318ZX with PID 8412 (started by Administrator in E:\IdeaWorkspace\spring-boot-入门)
+2019-08-15 15:42:10.746 DEBUG 8412 --- [restartedMain] c.w.s.SpringBootSsmApplication           : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-08-15 15:42:10.746  INFO 8412 --- [restartedMain] c.w.s.SpringBootSsmApplication           : The following profiles are active: dev
+2019-08-15 15:42:10.793  INFO 8412 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-15 15:42:10.794  INFO 8412 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-15 15:42:12.103  INFO 8412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2019-08-15 15:42:12.123  INFO 8412 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-15 15:42:12.123  INFO 8412 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-08-15 15:42:12.300  INFO 8412 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-15 15:42:12.301  INFO 8412 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1507 ms
+2019-08-15 15:42:13.488  INFO 8412 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-15 15:42:13.648  INFO 8412 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-08-15 15:42:13.689  INFO 8412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2019-08-15 15:42:13.691  INFO 8412 --- [restartedMain] c.w.s.SpringBootSsmApplication           : Started SpringBootSsmApplication in 3.463 seconds (JVM running for 4.439)
+2019-08-15 15:42:21.885  INFO 8412 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-15 15:42:21.885  INFO 8412 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-15 15:42:21.890  INFO 8412 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2019-08-15 15:42:21.906  INFO 8412 --- [http-nio-8082-exec-1] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUser method
+2019-08-15 15:42:21.907 DEBUG 8412 --- [http-nio-8082-exec-1] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserList method
+2019-08-15 15:42:22.358  INFO 8412 --- [http-nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-08-15 15:42:22.410  WARN 8412 --- [http-nio-8082-exec-1] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-08-15 15:42:27.793  INFO 8412 --- [http-nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-08-15 15:42:27.910 DEBUG 8412 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.getUserList           : ==>  Preparing: SELECT ID, USER_NAME, PASSWORD FROM TEST_USER WHERE STATUS = 1 
+2019-08-15 15:42:28.592 DEBUG 8412 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.getUserList           : ==> Parameters: 
+2019-08-15 15:42:28.691 DEBUG 8412 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.getUserList           : <==      Total: 1
+2019-08-15 15:42:28.751 DEBUG 8412 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.getUserList           : ==>  Preparing: SELECT ID, USER_NAME, PASSWORD FROM TEST_USER WHERE STATUS = 1 
+2019-08-15 15:42:28.752 DEBUG 8412 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.getUserList           : ==> Parameters: 
+2019-08-15 15:42:28.753 DEBUG 8412 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.getUserList           : <==      Total: 1
+2019-08-15 15:43:57.992  INFO 8412 --- [http-nio-8082-exec-5] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUser method
+2019-08-15 15:43:57.992 DEBUG 8412 --- [http-nio-8082-exec-5] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserList method
+2019-08-15 15:43:57.995 DEBUG 8412 --- [http-nio-8082-exec-5] c.w.s.dao.IUserDao.getUserList           : ==>  Preparing: SELECT ID, USER_NAME, PASSWORD FROM TEST_USER WHERE STATUS = 1 
+2019-08-15 15:43:57.995 DEBUG 8412 --- [http-nio-8082-exec-5] c.w.s.dao.IUserDao.getUserList           : ==> Parameters: 
+2019-08-15 15:43:58.016 DEBUG 8412 --- [http-nio-8082-exec-5] c.w.s.dao.IUserDao.getUserList           : <==      Total: 1
+2019-08-15 15:43:58.016 DEBUG 8412 --- [http-nio-8082-exec-5] c.w.s.dao.IUserDao.getUserList           : ==>  Preparing: SELECT ID, USER_NAME, PASSWORD FROM TEST_USER WHERE STATUS = 1 
+2019-08-15 15:43:58.017 DEBUG 8412 --- [http-nio-8082-exec-5] c.w.s.dao.IUserDao.getUserList           : ==> Parameters: 
+2019-08-15 15:43:58.019 DEBUG 8412 --- [http-nio-8082-exec-5] c.w.s.dao.IUserDao.getUserList           : <==      Total: 1
+2019-08-15 15:44:52.742  INFO 12552 --- [restartedMain] c.w.s.SpringBootSsmApplication           : Starting SpringBootSsmApplication on USER-20190318ZX with PID 12552 (started by Administrator in E:\IdeaWorkspace\spring-boot-入门)
+2019-08-15 15:44:52.745 DEBUG 12552 --- [restartedMain] c.w.s.SpringBootSsmApplication           : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-08-15 15:44:52.745  INFO 12552 --- [restartedMain] c.w.s.SpringBootSsmApplication           : The following profiles are active: dev
+2019-08-15 15:44:52.790  INFO 12552 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-15 15:44:52.790  INFO 12552 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-15 15:44:54.304  INFO 12552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2019-08-15 15:44:54.324  INFO 12552 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-15 15:44:54.324  INFO 12552 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-08-15 15:44:54.507  INFO 12552 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-15 15:44:54.507  INFO 12552 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1717 ms
+2019-08-15 15:44:55.379  INFO 12552 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-15 15:44:55.581  INFO 12552 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-08-15 15:44:55.629  INFO 12552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2019-08-15 15:44:55.632  INFO 12552 --- [restartedMain] c.w.s.SpringBootSsmApplication           : Started SpringBootSsmApplication in 3.438 seconds (JVM running for 5.121)
+2019-08-15 15:45:04.937  INFO 12552 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-15 15:45:04.938  INFO 12552 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-15 15:45:04.944  INFO 12552 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2019-08-15 15:45:04.963  INFO 12552 --- [http-nio-8082-exec-1] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUser method
+2019-08-15 15:45:08.785 DEBUG 12552 --- [http-nio-8082-exec-1] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserList method
+2019-08-15 15:45:08.850  INFO 12552 --- [http-nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-08-15 15:45:08.856  WARN 12552 --- [http-nio-8082-exec-1] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-08-15 15:45:11.578  INFO 12552 --- [http-nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-08-15 15:45:11.636 DEBUG 12552 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.getUserList           : ==>  Preparing: SELECT ID, USER_NAME, PASSWORD FROM TEST_USER WHERE STATUS = 1 
+2019-08-15 15:45:11.925 DEBUG 12552 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.getUserList           : ==> Parameters: 
+2019-08-15 15:45:12.136 DEBUG 12552 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.getUserList           : <==      Total: 1
+2019-08-15 15:45:12.146 DEBUG 12552 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.getUserList           : ==>  Preparing: SELECT ID, USER_NAME, PASSWORD FROM TEST_USER WHERE STATUS = 1 
+2019-08-15 15:45:12.147 DEBUG 12552 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.getUserList           : ==> Parameters: 
+2019-08-15 15:45:12.169 DEBUG 12552 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.getUserList           : <==      Total: 1
+2019-08-15 15:47:12.305  INFO 12552 --- [http-nio-8082-exec-5] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUserById method param.id: null
+2019-08-15 15:47:12.306 DEBUG 12552 --- [http-nio-8082-exec-5] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserById method param.id : null
+2019-08-15 15:47:12.308 DEBUG 12552 --- [http-nio-8082-exec-5] c.w.s.dao.IUserDao.getUserById           : ==>  Preparing: SELECT ID, USER_NAME, PASSWORD FROM TEST_USER WHERE ID = ? AND STATUS = 1 
+2019-08-15 15:47:12.309 DEBUG 12552 --- [http-nio-8082-exec-5] c.w.s.dao.IUserDao.getUserById           : ==> Parameters: null
+2019-08-15 15:47:12.381 DEBUG 12552 --- [http-nio-8082-exec-5] c.w.s.dao.IUserDao.getUserById           : <==      Total: 0
+2019-08-15 15:47:18.332  INFO 12552 --- [http-nio-8082-exec-8] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUserById method param.id: null
+2019-08-15 15:47:18.332 DEBUG 12552 --- [http-nio-8082-exec-8] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserById method param.id : null
+2019-08-15 15:47:18.333 DEBUG 12552 --- [http-nio-8082-exec-8] c.w.s.dao.IUserDao.getUserById           : ==>  Preparing: SELECT ID, USER_NAME, PASSWORD FROM TEST_USER WHERE ID = ? AND STATUS = 1 
+2019-08-15 15:47:18.333 DEBUG 12552 --- [http-nio-8082-exec-8] c.w.s.dao.IUserDao.getUserById           : ==> Parameters: null
+2019-08-15 15:47:18.334 DEBUG 12552 --- [http-nio-8082-exec-8] c.w.s.dao.IUserDao.getUserById           : <==      Total: 0
+2019-08-15 15:47:58.870  INFO 12552 --- [http-nio-8082-exec-1] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUserById method param.id: null
+2019-08-15 15:47:58.870 DEBUG 12552 --- [http-nio-8082-exec-1] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserById method param.id : null
+2019-08-15 15:47:58.871 DEBUG 12552 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.getUserById           : ==>  Preparing: SELECT ID, USER_NAME, PASSWORD FROM TEST_USER WHERE ID = ? AND STATUS = 1 
+2019-08-15 15:47:58.872 DEBUG 12552 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.getUserById           : ==> Parameters: null
+2019-08-15 15:47:58.873 DEBUG 12552 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.getUserById           : <==      Total: 0
+2019-08-15 15:47:59.853  INFO 12552 --- [http-nio-8082-exec-4] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUserById method param.id: null
+2019-08-15 15:47:59.854 DEBUG 12552 --- [http-nio-8082-exec-4] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserById method param.id : null
+2019-08-15 15:47:59.858 DEBUG 12552 --- [http-nio-8082-exec-4] c.w.s.dao.IUserDao.getUserById           : ==>  Preparing: SELECT ID, USER_NAME, PASSWORD FROM TEST_USER WHERE ID = ? AND STATUS = 1 
+2019-08-15 15:47:59.858 DEBUG 12552 --- [http-nio-8082-exec-4] c.w.s.dao.IUserDao.getUserById           : ==> Parameters: null
+2019-08-15 15:47:59.864 DEBUG 12552 --- [http-nio-8082-exec-4] c.w.s.dao.IUserDao.getUserById           : <==      Total: 0
+2019-08-15 15:48:11.706  INFO 12552 --- [http-nio-8082-exec-8] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUserById method param.id: 1
+2019-08-15 15:48:11.706 DEBUG 12552 --- [http-nio-8082-exec-8] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserById method param.id : 1
+2019-08-15 15:48:11.719 DEBUG 12552 --- [http-nio-8082-exec-8] c.w.s.dao.IUserDao.getUserById           : ==>  Preparing: SELECT ID, USER_NAME, PASSWORD FROM TEST_USER WHERE ID = ? AND STATUS = 1 
+2019-08-15 15:48:11.720 DEBUG 12552 --- [http-nio-8082-exec-8] c.w.s.dao.IUserDao.getUserById           : ==> Parameters: 1(Long)
+2019-08-15 15:48:11.733 DEBUG 12552 --- [http-nio-8082-exec-8] c.w.s.dao.IUserDao.getUserById           : <==      Total: 1
+2019-08-15 15:50:07.205  INFO 12552 --- [http-nio-8082-exec-10] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUserById method param.id: 1
+2019-08-15 15:50:07.206 DEBUG 12552 --- [http-nio-8082-exec-10] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserById method param.id : 1
+2019-08-15 15:50:07.206 DEBUG 12552 --- [http-nio-8082-exec-10] c.w.s.dao.IUserDao.getUserById           : ==>  Preparing: SELECT ID, USER_NAME, PASSWORD FROM TEST_USER WHERE ID = ? AND STATUS = 1 
+2019-08-15 15:50:07.207 DEBUG 12552 --- [http-nio-8082-exec-10] c.w.s.dao.IUserDao.getUserById           : ==> Parameters: 1(Long)
+2019-08-15 15:50:07.208 DEBUG 12552 --- [http-nio-8082-exec-10] c.w.s.dao.IUserDao.getUserById           : <==      Total: 1
+2019-08-15 15:50:07.971  INFO 12552 --- [http-nio-8082-exec-5] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUserById method param.id: 1
+2019-08-15 15:50:07.971 DEBUG 12552 --- [http-nio-8082-exec-5] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserById method param.id : 1
+2019-08-15 15:50:07.972 DEBUG 12552 --- [http-nio-8082-exec-5] c.w.s.dao.IUserDao.getUserById           : ==>  Preparing: SELECT ID, USER_NAME, PASSWORD FROM TEST_USER WHERE ID = ? AND STATUS = 1 
+2019-08-15 15:50:07.972 DEBUG 12552 --- [http-nio-8082-exec-5] c.w.s.dao.IUserDao.getUserById           : ==> Parameters: 1(Long)
+2019-08-15 15:50:07.973 DEBUG 12552 --- [http-nio-8082-exec-5] c.w.s.dao.IUserDao.getUserById           : <==      Total: 1
+2019-08-15 15:50:08.820  INFO 12552 --- [http-nio-8082-exec-7] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUserById method param.id: 1
+2019-08-15 15:50:08.820 DEBUG 12552 --- [http-nio-8082-exec-7] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserById method param.id : 1
+2019-08-15 15:50:08.821 DEBUG 12552 --- [http-nio-8082-exec-7] c.w.s.dao.IUserDao.getUserById           : ==>  Preparing: SELECT ID, USER_NAME, PASSWORD FROM TEST_USER WHERE ID = ? AND STATUS = 1 
+2019-08-15 15:50:08.821 DEBUG 12552 --- [http-nio-8082-exec-7] c.w.s.dao.IUserDao.getUserById           : ==> Parameters: 1(Long)
+2019-08-15 15:50:08.823 DEBUG 12552 --- [http-nio-8082-exec-7] c.w.s.dao.IUserDao.getUserById           : <==      Total: 1
+2019-08-15 15:50:09.067  INFO 12552 --- [http-nio-8082-exec-9] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUserById method param.id: 1
+2019-08-15 15:50:09.067 DEBUG 12552 --- [http-nio-8082-exec-9] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserById method param.id : 1
+2019-08-15 15:50:09.067 DEBUG 12552 --- [http-nio-8082-exec-9] c.w.s.dao.IUserDao.getUserById           : ==>  Preparing: SELECT ID, USER_NAME, PASSWORD FROM TEST_USER WHERE ID = ? AND STATUS = 1 
+2019-08-15 15:50:09.067 DEBUG 12552 --- [http-nio-8082-exec-9] c.w.s.dao.IUserDao.getUserById           : ==> Parameters: 1(Long)
+2019-08-15 15:50:09.068 DEBUG 12552 --- [http-nio-8082-exec-9] c.w.s.dao.IUserDao.getUserById           : <==      Total: 1
+2019-08-15 15:50:09.588  INFO 12552 --- [http-nio-8082-exec-10] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUserById method param.id: 1
+2019-08-15 15:50:09.588 DEBUG 12552 --- [http-nio-8082-exec-10] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserById method param.id : 1
+2019-08-15 15:50:09.588 DEBUG 12552 --- [http-nio-8082-exec-10] c.w.s.dao.IUserDao.getUserById           : ==>  Preparing: SELECT ID, USER_NAME, PASSWORD FROM TEST_USER WHERE ID = ? AND STATUS = 1 
+2019-08-15 15:50:09.589 DEBUG 12552 --- [http-nio-8082-exec-10] c.w.s.dao.IUserDao.getUserById           : ==> Parameters: 1(Long)
+2019-08-15 15:50:09.590 DEBUG 12552 --- [http-nio-8082-exec-10] c.w.s.dao.IUserDao.getUserById           : <==      Total: 1
+2019-08-15 15:50:10.094  INFO 12552 --- [http-nio-8082-exec-4] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUserById method param.id: 1
+2019-08-15 15:50:10.095 DEBUG 12552 --- [http-nio-8082-exec-4] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserById method param.id : 1
+2019-08-15 15:50:10.095 DEBUG 12552 --- [http-nio-8082-exec-4] c.w.s.dao.IUserDao.getUserById           : ==>  Preparing: SELECT ID, USER_NAME, PASSWORD FROM TEST_USER WHERE ID = ? AND STATUS = 1 
+2019-08-15 15:50:10.096 DEBUG 12552 --- [http-nio-8082-exec-4] c.w.s.dao.IUserDao.getUserById           : ==> Parameters: 1(Long)
+2019-08-15 15:50:10.098 DEBUG 12552 --- [http-nio-8082-exec-4] c.w.s.dao.IUserDao.getUserById           : <==      Total: 1
+2019-08-15 15:50:10.354  INFO 12552 --- [http-nio-8082-exec-5] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUserById method param.id: 1
+2019-08-15 15:50:10.355 DEBUG 12552 --- [http-nio-8082-exec-5] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserById method param.id : 1
+2019-08-15 15:50:10.355 DEBUG 12552 --- [http-nio-8082-exec-5] c.w.s.dao.IUserDao.getUserById           : ==>  Preparing: SELECT ID, USER_NAME, PASSWORD FROM TEST_USER WHERE ID = ? AND STATUS = 1 
+2019-08-15 15:50:10.356 DEBUG 12552 --- [http-nio-8082-exec-5] c.w.s.dao.IUserDao.getUserById           : ==> Parameters: 1(Long)
+2019-08-15 15:50:10.357 DEBUG 12552 --- [http-nio-8082-exec-5] c.w.s.dao.IUserDao.getUserById           : <==      Total: 1
+2019-08-15 15:50:10.810  INFO 12552 --- [http-nio-8082-exec-6] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUserById method param.id: 1
+2019-08-15 15:50:10.810 DEBUG 12552 --- [http-nio-8082-exec-6] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserById method param.id : 1
+2019-08-15 15:50:10.811 DEBUG 12552 --- [http-nio-8082-exec-6] c.w.s.dao.IUserDao.getUserById           : ==>  Preparing: SELECT ID, USER_NAME, PASSWORD FROM TEST_USER WHERE ID = ? AND STATUS = 1 
+2019-08-15 15:50:10.812 DEBUG 12552 --- [http-nio-8082-exec-6] c.w.s.dao.IUserDao.getUserById           : ==> Parameters: 1(Long)
+2019-08-15 15:50:10.814 DEBUG 12552 --- [http-nio-8082-exec-6] c.w.s.dao.IUserDao.getUserById           : <==      Total: 1
+2019-08-15 15:50:11.779  INFO 12552 --- [http-nio-8082-exec-2] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUserById method param.id: 1
+2019-08-15 15:50:11.779 DEBUG 12552 --- [http-nio-8082-exec-2] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserById method param.id : 1
+2019-08-15 15:50:11.780 DEBUG 12552 --- [http-nio-8082-exec-2] c.w.s.dao.IUserDao.getUserById           : ==>  Preparing: SELECT ID, USER_NAME, PASSWORD FROM TEST_USER WHERE ID = ? AND STATUS = 1 
+2019-08-15 15:50:11.781 DEBUG 12552 --- [http-nio-8082-exec-2] c.w.s.dao.IUserDao.getUserById           : ==> Parameters: 1(Long)
+2019-08-15 15:50:11.783 DEBUG 12552 --- [http-nio-8082-exec-2] c.w.s.dao.IUserDao.getUserById           : <==      Total: 1
+2019-08-15 15:50:23.938  INFO 12792 --- [restartedMain] c.w.s.SpringBootSsmApplication           : Starting SpringBootSsmApplication on USER-20190318ZX with PID 12792 (started by Administrator in E:\IdeaWorkspace\spring-boot-入门)
+2019-08-15 15:50:23.940 DEBUG 12792 --- [restartedMain] c.w.s.SpringBootSsmApplication           : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-08-15 15:50:23.940  INFO 12792 --- [restartedMain] c.w.s.SpringBootSsmApplication           : The following profiles are active: dev
+2019-08-15 15:50:23.980  INFO 12792 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-15 15:50:23.980  INFO 12792 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-15 15:50:25.400  INFO 12792 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2019-08-15 15:50:25.421  INFO 12792 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-15 15:50:25.421  INFO 12792 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-08-15 15:50:25.615  INFO 12792 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-15 15:50:25.615  INFO 12792 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1635 ms
+2019-08-15 15:50:26.172  INFO 12792 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-15 15:50:26.364  INFO 12792 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-08-15 15:50:26.413  INFO 12792 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2019-08-15 15:50:26.417  INFO 12792 --- [restartedMain] c.w.s.SpringBootSsmApplication           : Started SpringBootSsmApplication in 3.726 seconds (JVM running for 6.362)
+2019-08-15 15:50:30.306  INFO 12792 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-15 15:50:30.306  INFO 12792 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-15 15:50:30.312  INFO 12792 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2019-08-15 15:50:30.343  INFO 12792 --- [http-nio-8082-exec-1] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUserById method param.id: 1
+2019-08-15 15:50:30.344 DEBUG 12792 --- [http-nio-8082-exec-1] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserById method param.id : 1
+2019-08-15 15:50:30.369  INFO 12792 --- [http-nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-08-15 15:50:30.370  WARN 12792 --- [http-nio-8082-exec-1] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-08-15 15:50:30.842  INFO 12792 --- [http-nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-08-15 15:50:30.848 DEBUG 12792 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.getUserById           : ==>  Preparing: SELECT ID id, USER_NAME userName, PASSWORD password FROM TEST_USER WHERE ID = ? AND STATUS = 1 
+2019-08-15 15:50:30.870 DEBUG 12792 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.getUserById           : ==> Parameters: 1(Long)
+2019-08-15 15:50:30.895 DEBUG 12792 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.getUserById           : <==      Total: 1
+2019-08-15 15:50:44.489  INFO 12792 --- [http-nio-8082-exec-6] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUser method
+2019-08-15 15:50:44.489 DEBUG 12792 --- [http-nio-8082-exec-6] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserList method
+2019-08-15 15:50:44.492 DEBUG 12792 --- [http-nio-8082-exec-6] c.w.s.dao.IUserDao.getUserList           : ==>  Preparing: SELECT ID id, USER_NAME userName, PASSWORD password FROM TEST_USER WHERE STATUS = 1 
+2019-08-15 15:50:44.493 DEBUG 12792 --- [http-nio-8082-exec-6] c.w.s.dao.IUserDao.getUserList           : ==> Parameters: 
+2019-08-15 15:50:44.494 DEBUG 12792 --- [http-nio-8082-exec-6] c.w.s.dao.IUserDao.getUserList           : <==      Total: 1
+2019-08-15 15:50:44.495 DEBUG 12792 --- [http-nio-8082-exec-6] c.w.s.dao.IUserDao.getUserList           : ==>  Preparing: SELECT ID id, USER_NAME userName, PASSWORD password FROM TEST_USER WHERE STATUS = 1 
+2019-08-15 15:50:44.496 DEBUG 12792 --- [http-nio-8082-exec-6] c.w.s.dao.IUserDao.getUserList           : ==> Parameters: 
+2019-08-15 15:50:44.498 DEBUG 12792 --- [http-nio-8082-exec-6] c.w.s.dao.IUserDao.getUserList           : <==      Total: 1
+2019-08-15 15:54:08.518  INFO 12792 --- [http-nio-8082-exec-5] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUser method
+2019-08-15 15:54:08.518 DEBUG 12792 --- [http-nio-8082-exec-5] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserList method
+2019-08-15 15:54:08.519 DEBUG 12792 --- [http-nio-8082-exec-5] c.w.s.dao.IUserDao.getUserList           : ==>  Preparing: SELECT ID id, USER_NAME userName, PASSWORD password FROM TEST_USER WHERE STATUS = 1 
+2019-08-15 15:54:08.520 DEBUG 12792 --- [http-nio-8082-exec-5] c.w.s.dao.IUserDao.getUserList           : ==> Parameters: 
+2019-08-15 15:54:08.521 DEBUG 12792 --- [http-nio-8082-exec-5] c.w.s.dao.IUserDao.getUserList           : <==      Total: 1
+2019-08-15 15:54:08.522 DEBUG 12792 --- [http-nio-8082-exec-5] c.w.s.dao.IUserDao.getUserList           : ==>  Preparing: SELECT ID id, USER_NAME userName, PASSWORD password FROM TEST_USER WHERE STATUS = 1 
+2019-08-15 15:54:08.522 DEBUG 12792 --- [http-nio-8082-exec-5] c.w.s.dao.IUserDao.getUserList           : ==> Parameters: 
+2019-08-15 15:54:08.524 DEBUG 12792 --- [http-nio-8082-exec-5] c.w.s.dao.IUserDao.getUserList           : <==      Total: 1
+2019-08-15 15:54:44.188  INFO 12792 --- [http-nio-8082-exec-9] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUserById method param.id: 1
+2019-08-15 15:54:44.188 DEBUG 12792 --- [http-nio-8082-exec-9] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserById method param.id : 1
+2019-08-15 15:54:44.189 DEBUG 12792 --- [http-nio-8082-exec-9] c.w.s.dao.IUserDao.getUserById           : ==>  Preparing: SELECT ID id, USER_NAME userName, PASSWORD password FROM TEST_USER WHERE ID = ? AND STATUS = 1 
+2019-08-15 15:54:44.189 DEBUG 12792 --- [http-nio-8082-exec-9] c.w.s.dao.IUserDao.getUserById           : ==> Parameters: 1(Long)
+2019-08-15 15:54:44.190 DEBUG 12792 --- [http-nio-8082-exec-9] c.w.s.dao.IUserDao.getUserById           : <==      Total: 1
+2019-08-15 15:54:45.955  INFO 12792 --- [http-nio-8082-exec-1] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUserById method param.id: 1
+2019-08-15 15:54:45.956 DEBUG 12792 --- [http-nio-8082-exec-1] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserById method param.id : 1
+2019-08-15 15:54:45.957 DEBUG 12792 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.getUserById           : ==>  Preparing: SELECT ID id, USER_NAME userName, PASSWORD password FROM TEST_USER WHERE ID = ? AND STATUS = 1 
+2019-08-15 15:54:45.957 DEBUG 12792 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.getUserById           : ==> Parameters: 1(Long)
+2019-08-15 15:54:45.958 DEBUG 12792 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.getUserById           : <==      Total: 1
+2019-08-15 15:54:49.449  INFO 12792 --- [http-nio-8082-exec-2] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUserById method param.id: 2
+2019-08-15 15:54:49.450 DEBUG 12792 --- [http-nio-8082-exec-2] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserById method param.id : 2
+2019-08-15 15:54:49.450 DEBUG 12792 --- [http-nio-8082-exec-2] c.w.s.dao.IUserDao.getUserById           : ==>  Preparing: SELECT ID id, USER_NAME userName, PASSWORD password FROM TEST_USER WHERE ID = ? AND STATUS = 1 
+2019-08-15 15:54:49.450 DEBUG 12792 --- [http-nio-8082-exec-2] c.w.s.dao.IUserDao.getUserById           : ==> Parameters: 2(Long)
+2019-08-15 15:54:49.454 DEBUG 12792 --- [http-nio-8082-exec-2] c.w.s.dao.IUserDao.getUserById           : <==      Total: 0
+2019-08-15 15:54:51.243  INFO 12792 --- [http-nio-8082-exec-3] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUserById method param.id: 2
+2019-08-15 15:54:51.244 DEBUG 12792 --- [http-nio-8082-exec-3] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserById method param.id : 2
+2019-08-15 15:54:51.245 DEBUG 12792 --- [http-nio-8082-exec-3] c.w.s.dao.IUserDao.getUserById           : ==>  Preparing: SELECT ID id, USER_NAME userName, PASSWORD password FROM TEST_USER WHERE ID = ? AND STATUS = 1 
+2019-08-15 15:54:51.246 DEBUG 12792 --- [http-nio-8082-exec-3] c.w.s.dao.IUserDao.getUserById           : ==> Parameters: 2(Long)
+2019-08-15 15:54:51.248 DEBUG 12792 --- [http-nio-8082-exec-3] c.w.s.dao.IUserDao.getUserById           : <==      Total: 0
+2019-08-15 15:54:53.987  INFO 12792 --- [http-nio-8082-exec-4] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUserById method param.id: 1
+2019-08-15 15:54:53.987 DEBUG 12792 --- [http-nio-8082-exec-4] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserById method param.id : 1
+2019-08-15 15:54:53.988 DEBUG 12792 --- [http-nio-8082-exec-4] c.w.s.dao.IUserDao.getUserById           : ==>  Preparing: SELECT ID id, USER_NAME userName, PASSWORD password FROM TEST_USER WHERE ID = ? AND STATUS = 1 
+2019-08-15 15:54:53.989 DEBUG 12792 --- [http-nio-8082-exec-4] c.w.s.dao.IUserDao.getUserById           : ==> Parameters: 1(Long)
+2019-08-15 15:54:53.991 DEBUG 12792 --- [http-nio-8082-exec-4] c.w.s.dao.IUserDao.getUserById           : <==      Total: 1
+2019-08-15 15:56:04.251  INFO 12792 --- [http-nio-8082-exec-7] com.wlb.springbootssm.config.LogConfig   : Process in UserController.addUser method param.user.toString(): User{id=null, userName='test1', password='123456'}
+2019-08-15 15:56:04.252 DEBUG 12792 --- [http-nio-8082-exec-7] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.addUser method param.user.toString() : User{id=null, userName='test1', password='123456'}
+2019-08-15 15:56:04.254 DEBUG 12792 --- [http-nio-8082-exec-7] c.w.springbootssm.dao.IUserDao.addUser   : ==>  Preparing: INSERT INTO TEST_USER( ID, USER_NAME, PASSWORD ) VALUES( ?, ?, ? ) 
+2019-08-15 15:56:04.285 DEBUG 12792 --- [http-nio-8082-exec-7] c.w.springbootssm.dao.IUserDao.addUser   : ==> Parameters: null, test1(String), 123456(String)
+2019-08-15 15:56:05.136 DEBUG 12792 --- [http-nio-8082-exec-7] c.w.springbootssm.dao.IUserDao.addUser   : <==    Updates: 1
+2019-08-15 15:57:17.580  INFO 12792 --- [http-nio-8082-exec-9] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUserById method param.id: 1
+2019-08-15 15:57:17.581 DEBUG 12792 --- [http-nio-8082-exec-9] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserById method param.id : 1
+2019-08-15 15:57:17.581 DEBUG 12792 --- [http-nio-8082-exec-9] c.w.s.dao.IUserDao.getUserById           : ==>  Preparing: SELECT ID id, USER_NAME userName, PASSWORD password FROM TEST_USER WHERE ID = ? AND STATUS = 1 
+2019-08-15 15:57:17.582 DEBUG 12792 --- [http-nio-8082-exec-9] c.w.s.dao.IUserDao.getUserById           : ==> Parameters: 1(Long)
+2019-08-15 15:57:17.583 DEBUG 12792 --- [http-nio-8082-exec-9] c.w.s.dao.IUserDao.getUserById           : <==      Total: 1
+2019-08-15 15:57:30.045  INFO 12792 --- [http-nio-8082-exec-1] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUser method
+2019-08-15 15:57:30.045 DEBUG 12792 --- [http-nio-8082-exec-1] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserList method
+2019-08-15 15:57:30.046 DEBUG 12792 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.getUserList           : ==>  Preparing: SELECT ID id, USER_NAME userName, PASSWORD password FROM TEST_USER WHERE STATUS = 1 
+2019-08-15 15:57:30.047 DEBUG 12792 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.getUserList           : ==> Parameters: 
+2019-08-15 15:57:30.048 DEBUG 12792 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.getUserList           : <==      Total: 2
+2019-08-15 15:57:30.048 DEBUG 12792 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.getUserList           : ==>  Preparing: SELECT ID id, USER_NAME userName, PASSWORD password FROM TEST_USER WHERE STATUS = 1 
+2019-08-15 15:57:30.049 DEBUG 12792 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.getUserList           : ==> Parameters: 
+2019-08-15 15:57:30.050 DEBUG 12792 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.getUserList           : <==      Total: 2
+2019-08-15 15:57:31.753  INFO 12792 --- [http-nio-8082-exec-2] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUser method
+2019-08-15 15:57:31.753 DEBUG 12792 --- [http-nio-8082-exec-2] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserList method
+2019-08-15 15:57:31.754 DEBUG 12792 --- [http-nio-8082-exec-2] c.w.s.dao.IUserDao.getUserList           : ==>  Preparing: SELECT ID id, USER_NAME userName, PASSWORD password FROM TEST_USER WHERE STATUS = 1 
+2019-08-15 15:57:31.754 DEBUG 12792 --- [http-nio-8082-exec-2] c.w.s.dao.IUserDao.getUserList           : ==> Parameters: 
+2019-08-15 15:57:31.756 DEBUG 12792 --- [http-nio-8082-exec-2] c.w.s.dao.IUserDao.getUserList           : <==      Total: 2
+2019-08-15 15:57:31.757 DEBUG 12792 --- [http-nio-8082-exec-2] c.w.s.dao.IUserDao.getUserList           : ==>  Preparing: SELECT ID id, USER_NAME userName, PASSWORD password FROM TEST_USER WHERE STATUS = 1 
+2019-08-15 15:57:31.757 DEBUG 12792 --- [http-nio-8082-exec-2] c.w.s.dao.IUserDao.getUserList           : ==> Parameters: 
+2019-08-15 15:57:31.760 DEBUG 12792 --- [http-nio-8082-exec-2] c.w.s.dao.IUserDao.getUserList           : <==      Total: 2
+2019-08-15 15:57:34.393  INFO 12792 --- [http-nio-8082-exec-3] com.wlb.springbootssm.config.LogConfig   : Process in UserController.addUser method param.user.toString(): User{id=null, userName='test1', password='123456'}
+2019-08-15 15:57:34.394 DEBUG 12792 --- [http-nio-8082-exec-3] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.addUser method param.user.toString() : User{id=null, userName='test1', password='123456'}
+2019-08-15 15:57:34.395 DEBUG 12792 --- [http-nio-8082-exec-3] c.w.springbootssm.dao.IUserDao.addUser   : ==>  Preparing: INSERT INTO TEST_USER( ID, USER_NAME, PASSWORD ) VALUES( ?, ?, ? ) 
+2019-08-15 15:57:34.396 DEBUG 12792 --- [http-nio-8082-exec-3] c.w.springbootssm.dao.IUserDao.addUser   : ==> Parameters: null, test1(String), 123456(String)
+2019-08-15 15:57:34.584 DEBUG 12792 --- [http-nio-8082-exec-3] c.w.springbootssm.dao.IUserDao.addUser   : <==    Updates: 1
+2019-08-15 15:57:35.839  INFO 12792 --- [http-nio-8082-exec-4] com.wlb.springbootssm.config.LogConfig   : Process in UserController.addUser method param.user.toString(): User{id=null, userName='test1', password='123456'}
+2019-08-15 15:57:35.839 DEBUG 12792 --- [http-nio-8082-exec-4] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.addUser method param.user.toString() : User{id=null, userName='test1', password='123456'}
+2019-08-15 15:57:35.840 DEBUG 12792 --- [http-nio-8082-exec-4] c.w.springbootssm.dao.IUserDao.addUser   : ==>  Preparing: INSERT INTO TEST_USER( ID, USER_NAME, PASSWORD ) VALUES( ?, ?, ? ) 
+2019-08-15 15:57:35.841 DEBUG 12792 --- [http-nio-8082-exec-4] c.w.springbootssm.dao.IUserDao.addUser   : ==> Parameters: null, test1(String), 123456(String)
+2019-08-15 15:57:36.073 DEBUG 12792 --- [http-nio-8082-exec-4] c.w.springbootssm.dao.IUserDao.addUser   : <==    Updates: 1
+2019-08-15 15:57:48.726  INFO 12792 --- [http-nio-8082-exec-6] com.wlb.springbootssm.config.LogConfig   : Process in UserController.findUser method
+2019-08-15 15:57:48.726 DEBUG 12792 --- [http-nio-8082-exec-6] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.getUserList method
+2019-08-15 15:57:48.727 DEBUG 12792 --- [http-nio-8082-exec-6] c.w.s.dao.IUserDao.getUserList           : ==>  Preparing: SELECT ID id, USER_NAME userName, PASSWORD password FROM TEST_USER WHERE STATUS = 1 
+2019-08-15 15:57:48.728 DEBUG 12792 --- [http-nio-8082-exec-6] c.w.s.dao.IUserDao.getUserList           : ==> Parameters: 
+2019-08-15 15:57:48.730 DEBUG 12792 --- [http-nio-8082-exec-6] c.w.s.dao.IUserDao.getUserList           : <==      Total: 4
+2019-08-15 15:57:48.731 DEBUG 12792 --- [http-nio-8082-exec-6] c.w.s.dao.IUserDao.getUserList           : ==>  Preparing: SELECT ID id, USER_NAME userName, PASSWORD password FROM TEST_USER WHERE STATUS = 1 
+2019-08-15 15:57:48.731 DEBUG 12792 --- [http-nio-8082-exec-6] c.w.s.dao.IUserDao.getUserList           : ==> Parameters: 
+2019-08-15 15:57:48.732 DEBUG 12792 --- [http-nio-8082-exec-6] c.w.s.dao.IUserDao.getUserList           : <==      Total: 4
+2019-08-15 16:01:25.762  INFO 12792 --- [http-nio-8082-exec-7] com.wlb.springbootssm.config.LogConfig   : Process in UserController.updateUser method param.user.toString() : User{id=2, userName='000', password='000'}
+2019-08-15 16:01:25.763 DEBUG 12792 --- [http-nio-8082-exec-7] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.updateUserById method param.user.toString() : User{id=2, userName='000', password='000'}
+2019-08-15 16:01:25.765 DEBUG 12792 --- [http-nio-8082-exec-7] c.w.s.dao.IUserDao.updateUserById        : ==>  Preparing: UPDATE TEST_USER SET USER_NAME = ?, PASSWORD = ? WHERE ID = ? AND STATUS = 1 
+2019-08-15 16:01:25.766 DEBUG 12792 --- [http-nio-8082-exec-7] c.w.s.dao.IUserDao.updateUserById        : ==> Parameters: 000(String), 000(String), 2(Integer)
+2019-08-15 16:01:26.096 DEBUG 12792 --- [http-nio-8082-exec-7] c.w.s.dao.IUserDao.updateUserById        : <==    Updates: 1
+2019-08-15 16:01:33.174  INFO 12792 --- [http-nio-8082-exec-5] com.wlb.springbootssm.config.LogConfig   : Process in UserController.updateUser method param.user.toString() : User{id=2, userName='000', password='000'}
+2019-08-15 16:01:33.174 DEBUG 12792 --- [http-nio-8082-exec-5] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.updateUserById method param.user.toString() : User{id=2, userName='000', password='000'}
+2019-08-15 16:01:33.175 DEBUG 12792 --- [http-nio-8082-exec-5] c.w.s.dao.IUserDao.updateUserById        : ==>  Preparing: UPDATE TEST_USER SET USER_NAME = ?, PASSWORD = ? WHERE ID = ? AND STATUS = 1 
+2019-08-15 16:01:33.175 DEBUG 12792 --- [http-nio-8082-exec-5] c.w.s.dao.IUserDao.updateUserById        : ==> Parameters: 000(String), 000(String), 2(Integer)
+2019-08-15 16:01:33.176 DEBUG 12792 --- [http-nio-8082-exec-5] c.w.s.dao.IUserDao.updateUserById        : <==    Updates: 1
+2019-08-15 16:01:36.906  INFO 12792 --- [http-nio-8082-exec-9] com.wlb.springbootssm.config.LogConfig   : Process in UserController.updateUser method param.user.toString() : User{id=2, userName='000', password='000'}
+2019-08-15 16:01:36.907 DEBUG 12792 --- [http-nio-8082-exec-9] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.updateUserById method param.user.toString() : User{id=2, userName='000', password='000'}
+2019-08-15 16:01:36.907 DEBUG 12792 --- [http-nio-8082-exec-9] c.w.s.dao.IUserDao.updateUserById        : ==>  Preparing: UPDATE TEST_USER SET USER_NAME = ?, PASSWORD = ? WHERE ID = ? AND STATUS = 1 
+2019-08-15 16:01:36.908 DEBUG 12792 --- [http-nio-8082-exec-9] c.w.s.dao.IUserDao.updateUserById        : ==> Parameters: 000(String), 000(String), 2(Integer)
+2019-08-15 16:01:36.909 DEBUG 12792 --- [http-nio-8082-exec-9] c.w.s.dao.IUserDao.updateUserById        : <==    Updates: 1
+2019-08-15 16:01:41.512  INFO 12792 --- [http-nio-8082-exec-1] com.wlb.springbootssm.config.LogConfig   : Process in UserController.updateUser method param.user.toString() : User{id=5, userName='000', password='000'}
+2019-08-15 16:01:41.512 DEBUG 12792 --- [http-nio-8082-exec-1] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.updateUserById method param.user.toString() : User{id=5, userName='000', password='000'}
+2019-08-15 16:01:41.513 DEBUG 12792 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.updateUserById        : ==>  Preparing: UPDATE TEST_USER SET USER_NAME = ?, PASSWORD = ? WHERE ID = ? AND STATUS = 1 
+2019-08-15 16:01:41.514 DEBUG 12792 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.updateUserById        : ==> Parameters: 000(String), 000(String), 5(Integer)
+2019-08-15 16:01:41.515 DEBUG 12792 --- [http-nio-8082-exec-1] c.w.s.dao.IUserDao.updateUserById        : <==    Updates: 0
+2019-08-15 16:02:01.166  INFO 12792 --- [http-nio-8082-exec-2] com.wlb.springbootssm.config.LogConfig   : Process in UserController.updateUser method param.user.toString() : User{id=5, userName='000', password='000'}
+2019-08-15 16:02:01.167 DEBUG 12792 --- [http-nio-8082-exec-2] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.updateUserById method param.user.toString() : User{id=5, userName='000', password='000'}
+2019-08-15 16:02:01.168 DEBUG 12792 --- [http-nio-8082-exec-2] c.w.s.dao.IUserDao.updateUserById        : ==>  Preparing: UPDATE TEST_USER SET USER_NAME = ?, PASSWORD = ? WHERE ID = ? AND STATUS = 1 
+2019-08-15 16:02:01.172 DEBUG 12792 --- [http-nio-8082-exec-2] c.w.s.dao.IUserDao.updateUserById        : ==> Parameters: 000(String), 000(String), 5(Integer)
+2019-08-15 16:02:01.174 DEBUG 12792 --- [http-nio-8082-exec-2] c.w.s.dao.IUserDao.updateUserById        : <==    Updates: 0
+2019-08-15 16:03:11.721  INFO 12792 --- [http-nio-8082-exec-4] com.wlb.springbootssm.config.LogConfig   : Process in UserController.deleteUser method param.id: 4
+2019-08-15 16:03:11.721 DEBUG 12792 --- [http-nio-8082-exec-4] com.wlb.springbootssm.config.LogConfig   : Process in UserServiceImpl.deleteUserById method param.id : 4
+2019-08-15 16:03:11.722 DEBUG 12792 --- [http-nio-8082-exec-4] c.w.s.dao.IUserDao.deleteUserById        : ==>  Preparing: UPDATE TEST_USER SET STATUS = 0 WHERE ID = ? AND STATUS = 1 
+2019-08-15 16:03:11.722 DEBUG 12792 --- [http-nio-8082-exec-4] c.w.s.dao.IUserDao.deleteUserById        : ==> Parameters: 4(Long)
+2019-08-15 16:03:11.983 DEBUG 12792 --- [http-nio-8082-exec-4] c.w.s.dao.IUserDao.deleteUserById        : <==    Updates: 1
